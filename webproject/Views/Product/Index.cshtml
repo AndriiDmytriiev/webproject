@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3>Product List</h3>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>ExpiredDate</th>
+
+
+        </tr>
+        @foreach (var product in ViewBag.products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Description</td>
+                <td>@product.ExpiredDate</td>
+            </tr>
+        }
+    </table>
+    <br>
+
+    <a href="/Product/add">Add Items</a> |
+    <a href="/Product/delete">Delete Items</a> |
+    <a href="/Product/update">Update Items</a> |
+    <a href="/Product/search">Search Items</a> |
+
+</body>
+</html>
