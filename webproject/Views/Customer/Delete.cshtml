@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+@model webproject.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+    <h3>Customer Info</h3>
+    <form method="post" asp-controller="product" asp-action="Delete">
+        
+            <table cellpadding="2" cellspacing="2">
+                <tr>
+                    <td>Id</td>
+                    <td>
+                        <input type="text" name="Id" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="submit" value="Delete" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+       
+</body>
+</html>

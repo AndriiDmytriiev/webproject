@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+
+    /**/
+    <h3>Product Info</h3>
+    <form method="post" asp-controller="product" asp-action="Add">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="text" name="Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <input type="text" name="Price" />
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>
+                    <input type="text" name="Description" />
+                </td>
+            </tr>
+            <tr>
+                <td>Creation Date</td>
+                <td>
+                    <input type="text" name="CreationDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>Expired Date</td>
+                <td>
+                    <input type="text" name="ExpiredDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+@model webproject.Models.Product
+@*@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(s => s.Id)
+    @Html.TextBoxFor(s => s.Name)
+    @Html.TextBoxFor(s => s.Price)
+    @Html.TextBoxFor(s => s.Description)
+}*@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+
+    
+    <h3>Order Info</h3>
+    <form method="post" asp-controller="product" asp-action="Add">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="text" name="Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <input type="text" name="Status" />
+                </td>
+            </tr>
+            <tr>
+                <td>Qty</td>
+                <td>
+                    <input type="text" name="Qty" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Creation Date</td>
+                <td>
+                    <input type="text" name="CreationDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>Estimated Date</td>
+                <td>
+                    <input type="text" name="EstimatedDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

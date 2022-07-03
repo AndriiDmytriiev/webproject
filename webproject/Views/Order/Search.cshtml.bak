@@ -1,0 +1,131 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+
+    /**/
+    <h3>Product Info</h3>
+    <form method="post" asp-controller="product" asp-action="Search">
+        <b>Search By:</b>
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td> Quantity @Html.RadioButton("searchBy", "Qty", true)</td>
+                <td>Status @Html.RadioButton("searchBy", "Status")</td>
+
+
+            </tr>
+
+
+
+            <tr>
+                <td>Input Search exprrssion:</td>
+                <td>
+                    <input type="text" name="Name" />
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+
+
+    <h3>Order List</h3>
+
+    <h3>Order List</h3>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Status</th>
+            <th>Qty</th>
+            <th>CreationDate</th>
+            <th>EstimatedDate</th>
+
+
+        </tr>
+ @if (@ViewBag.orders != null)
+        {
+        @foreach (var order in ViewBag.orders)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Status</td>
+                <td>@order.Qty</td>
+                <td>@order.Description</td>
+                <td>@order.EstimatedDate</td>
+            </tr>
+        }
+        }
+        }
+
+    </table>
+    <br>
+
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <th>Customers:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Customer/add">Add Items</a> |
+                            <a href="~/Customer/delete">Delete Items</a> |
+                            <a href="~/Customer/edit">Update Items</a> |
+                            <a href="~/Customer/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <th>Orders:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Order/add">Add Items</a> |
+                            <a href="~/Order/delete">Delete Items</a> |
+                            <a href="~/Order/edit">Update Items</a> |
+                            <a href="~/Order/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <th>Products:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Product/add">Add Items</a> |
+                            <a href="~/Product/delete">Delete Items</a> |
+                            <a href="~/Product/edit">Update Items</a> |
+                            <a href="~/Product/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+

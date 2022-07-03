@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+@model webproject.Models.Order
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+    <h3>Order Info</h3>
+    <form method="post" asp-controller="order" asp-action="Edit">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="text" name="Id" />
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <input type="text" name="Status" />
+                </td>
+            </tr>
+            <tr>
+                <td>Qty</td>
+                <td>
+                    <input type="text" name="Qty" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Creation Date</td>
+                <td>
+                    <input type="text" name="CreationDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>Estimated Date</td>
+                <td>
+                    <input type="text" name="EstimatedDate" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

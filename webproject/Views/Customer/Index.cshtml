@@ -1,0 +1,83 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3>Customer List</h3>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            
+        </tr>
+        @foreach (var customer in ViewBag.customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Fname</td>
+                <td>@customer.Lname</td>
+                <td>@customer.Address</td>
+                <td>@customer.Phone</td>
+            </tr>
+        }
+
+    </table>
+    <br>
+
+    <table border="1">
+        <tr>
+            <td>
+                <table border="1">
+                    <th>Customers:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Customer/add">Add Items</a> |
+                            <a href="~/Customer/delete">Delete Items</a> |
+                            <a href="~/Customer/edit">Update Items</a> |
+                            <a href="~/Customer/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table border="1">
+                    <th>Orders:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Order/add">Add Items</a> |
+                            <a href="~/Order/delete">Delete Items</a> |
+                            <a href="~/Order/edit">Update Items</a> |
+                            <a href="~/Order/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table border="1">
+                    <th>Products:</th>
+                    <tr>
+                        <td>
+                            <a href="~/Product/add">Add Items</a> |
+                            <a href="~/Product/delete">Delete Items</a> |
+                            <a href="~/Product/edit">Update Items</a> |
+                            <a href="~/Product/search">Search Items</a> |
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
